@@ -1,0 +1,1382 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f4ead7;
+    color: #a92d2b;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+header {
+    width: 100%;
+    min-height: 70px;
+    border-bottom: 1px solid #d9a99b;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+    gap: 25px;
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 900;
+    color: #a92d2b;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-left: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a {
+    color: #a92d2b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.pedido {
+    border: 1px solid #8d1a1a;
+    border-radius: 25px;
+
+    padding: 8px 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #b83232;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.pedido span {
+    border: 1px solid #e32929;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    width: 100%;
+    min-height: 380px;
+
+    border-bottom: 1px solid #d9a99b;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+
+    padding: 55px 20px 40px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(77px, 9vw, 280px);
+    line-height: 0.9;
+
+    font-weight: 900;
+    letter-spacing: -5px;
+
+    color: #a92d2b;
+}
+
+.subtitle {
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+
+    font-size: clamp(32px, 5vw, 120px);
+    line-height: 1;
+
+    color: #a92d2b;
+
+    margin-top: 8px;
+}
+
+.slogan {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(20px, 2.5vw, 30px);
+    font-weight: bold;
+
+    margin-top: -20px;
+}
+
+.heart {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    font-size: 55px;
+}
+
+.description {
+    max-width: 480px;
+
+    margin: 16px auto 0;
+
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+
+    color: #a92d2b;
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    background-color: #a8292b;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    padding: 11px 25px;
+
+    border-radius: 20px;
+
+    transition: 0.2s ease;
+}
+
+.hero-button:hover {
+    background-color: #8f2524;
+    transform: translateY(-1px);
+}
+
+.pizza-decoration {
+    position: absolute;
+
+    width: 400px;
+    height: 650px;
+
+    margin-left: -980px;
+    margin-top: -120px;
+    bottom: 15px;
+
+    object-fit: cover;
+
+    transform: rotate(-10deg);
+
+    z-index: 1;
+}
+
+/* =========================================================
+   CARDÁPIO
+========================================================= */
+
+.menu {
+    width: 100%;
+    padding: 65px 5% 60px;
+}
+
+.menu-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-intro p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+
+    margin-bottom: 7px;
+}
+
+.menu-intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1;
+
+    font-weight: 900;
+}
+
+.pizza-grid {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.pizza-card {
+    width: 100%;
+
+    border: 3px solid #aa2d2b;
+
+    background-color: #f4ead7;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    transition: transform 0.2s ease;
+}
+
+.pizza-card:hover {
+    transform: translateY(-3px);
+}
+
+.pizza-card img {
+    display: block;
+
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+}
+
+.pizza-info {
+    padding: 14px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.categoria {
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    color: #a92d2b;
+
+    margin-bottom: 5px;
+}
+
+.pizza-name {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+    line-height: 1.1;
+
+    font-weight: 900;
+
+    color: #a92d2b;
+}
+
+.pizza-description {
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+
+    min-height: 45px;
+
+    margin: 8px 0;
+
+    color: #9d4b45;
+}
+
+.card-bottom {
+    margin-top: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+.price {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 19px;
+
+    font-weight: 900;
+
+    color: #a92d2b;
+}
+
+.add-button {
+    border: none;
+
+    background-color: #a92d2b;
+    color: white;
+
+    border-radius: 12px;
+
+    padding: 7px 12px;
+
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.add-button:hover {
+    background-color: #8f2524;
+}
+
+/*
+   IMPORTANTE:
+   Removemos o antigo nth-child(7) e nth-child(8).
+
+   Aquela regra estava empurrando o card 7 para o lado
+   e deixando o grid torto.
+*/
+
+/* =========================================================
+   NOSSA HISTÓRIA
+========================================================= */
+
+.historia {
+    width: 100%;
+
+    border-top: 1px solid #d9a99b;
+    border-bottom: 1px solid #d9a99b;
+
+    padding: 75px 5% 65px;
+
+    overflow: hidden;
+}
+
+/* =========================================================
+   TÍTULO DA HISTÓRIA
+========================================================= */
+
+.historia-top {
+    width: min(950px, 100%);
+
+    margin: 0 auto 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 60px;
+}
+
+.historia-ilustracao {
+    width: 230px;
+
+    flex-shrink: 0;
+}
+
+.historia-ilustracao img {
+    width: 100%;
+
+    display: block;
+
+    transform: rotate(-8deg);
+
+    margin-left: -230px;
+    margin-top: 20px;
+}
+
+.historia-titulo {
+    text-align: left;
+}
+
+.historia-titulo span {
+    display: block;
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+    color: #b52e30;
+
+    margin-bottom: 10px;
+    margin-left: -120px;
+}
+
+.historia-titulo h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    color: #a92d2b;
+
+    margin-left: -250px;
+}
+
+/* =========================================================
+   OS 3 ITENS
+========================================================= */
+
+.historia-itens {
+    width: min(950px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 60px;
+}
+
+.historia-item {
+    text-align: center;
+}
+
+.historia-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 14px;
+
+    border: 1.5px solid #e32929;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #e32929;
+
+    font-size: 27px;
+}
+
+.historia-item strong {
+    display: block;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+
+    color: #a92d2b;
+}
+
+.historia-item h3 {
+    margin: 0 0 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    color: #a92d2b;
+}
+
+.historia-item p {
+    max-width: 250px;
+
+    margin: 0 auto;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #9d4b45;
+}
+
+/* =========================================================
+   INFORMAÇÕES DA LOJA
+========================================================= */
+
+.informacoes {
+    width: 100%;
+
+    min-height: 190px;
+
+    padding: 45px 5%;
+
+    border-bottom: 1px solid #d9a99b;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    align-items: center;
+
+    gap: 50px;
+
+    position: relative;
+}
+
+.info-card {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+}
+
+.info-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border: 1.5px solid #e32929;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #e32929;
+
+    font-size: 22px;
+}
+
+.info-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.info-text span {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #a92d2b;
+}
+
+.info-text strong {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    color: #a92d2b;
+}
+
+.info-text small {
+    font-size: 10px;
+
+    color: #9d4b45;
+}
+
+/* =========================================================
+   PEÇA EM CASA
+========================================================= */
+
+.pedido-info {
+    text-align: center;
+
+    position: relative;
+
+    padding: 12px 20px;
+}
+
+.pedido-info::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 130px;
+
+    border: 1px solid #e32929;
+
+    border-left: none;
+    border-bottom: none;
+
+    border-radius: 0 100% 0 0;
+
+    right: -20px;
+    top: -50px;
+
+    pointer-events: none;
+}
+
+.pedido-info h3 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.25;
+
+    color: #a92d2b;
+}
+
+.pedido-info h3 em {
+    font-style: italic;
+}
+
+.pedido-info p {
+    margin-top: 8px;
+
+    font-size: 10px;
+
+    color: #9d4b45;
+}
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.footer {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+/* INSTAGRAM */
+
+.instagram {
+    min-height: 45px;
+
+    border-bottom: 1px solid #d9a99b;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    color: #a92d2b;
+}
+
+/* =========================================================
+   ÁREA DO LOGO
+========================================================= */
+
+.footer-content {
+    width: min(1100px, 100%);
+
+    min-height: 320px;
+
+    margin: 0 auto;
+
+    padding: 55px 5%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo-area {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 28px 120px;
+
+    border: 5px solid #a92d2b;
+
+    border-radius: 50%;
+
+    transform: rotate(-2deg);
+}
+
+.footer-logo {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(60px, 8vw, 95px);
+
+    line-height: 0.8;
+
+    letter-spacing: -5px;
+
+    font-weight: 900;
+
+    color: #a92d2b;
+}
+
+.footer-subtitle {
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+
+    font-size: 30px;
+
+    margin-top: 10px;
+
+    color: #a92d2b;
+}
+
+.footer-logo-area p {
+    margin-top: 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    color: #a92d2b;
+}
+
+.footer-logo-area small {
+    display: block;
+
+    margin-top: 14px;
+
+    font-size: 9px;
+
+    color: #a92d2b;
+}
+
+/* =========================================================
+   CHEF
+========================================================= */
+
+.chef-decoration {
+    position: absolute;
+
+    right: 4%;
+
+    bottom: 15px;
+
+    z-index: 3;
+
+    width: 330px;
+}
+
+.chef-decoration img {
+    width: 100%;
+
+    display: block;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 30px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .pizza-grid {
+        gap: 20px;
+    }
+
+    .pizza-card img {
+        height: 150px;
+    }
+
+    .historia-top {
+        gap: 35px;
+    }
+
+    .historia-ilustracao {
+        width: 160px;
+    }
+
+    .historia-itens {
+        gap: 30px;
+    }
+
+    .informacoes {
+        gap: 25px;
+    }
+
+    .footer-logo-area {
+        padding: 25px 90px;
+    }
+
+    .chef-decoration {
+        width: 130px;
+    }
+}
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* CABEÇALHO */
+
+    header {
+        min-height: 60px;
+
+        padding: 0 16px;
+
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 12px;
+        margin-left: auto;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .pedido {
+        padding: 6px 9px;
+
+        font-size: 9px;
+    }
+
+    .pedido span {
+        width: 15px;
+        height: 15px;
+
+        font-size: 9px;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 310px;
+    }
+
+    .hero-content {
+        padding: 45px 18px 35px;
+    }
+
+    .hero h1 {
+        font-size: clamp(50px, 16vw, 75px);
+
+        letter-spacing: -4px;
+    }
+
+    .subtitle {
+        font-size: 30px;
+    }
+
+    .slogan {
+        font-size: 19px;
+
+        margin-top: 10px;
+    }
+
+    .description {
+        font-size: 9px;
+
+        max-width: 320px;
+
+        margin-top: 13px;
+    }
+
+    .hero-button {
+        font-size: 10px;
+
+        padding: 9px 20px;
+
+        margin-top: 16px;
+    }
+
+    .pizza-decoration {
+        width: 90px;
+        height: 90px;
+
+        left: -5px;
+        bottom: 8px;
+    }
+
+    /* CARDÁPIO */
+
+    .menu {
+        padding: 45px 16px 45px;
+    }
+
+    .menu-intro {
+        margin-bottom: 28px;
+    }
+
+    .menu-intro p {
+        font-size: 11px;
+    }
+
+    .menu-intro h2 {
+        font-size: 30px;
+    }
+
+    .pizza-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 18px 12px;
+    }
+
+    .pizza-card {
+        border-width: 2px;
+    }
+
+    .pizza-card img {
+        height: 125px;
+    }
+
+    .pizza-info {
+        padding: 10px 8px;
+    }
+
+    .categoria {
+        font-size: 8px;
+    }
+
+    .pizza-name {
+        font-size: 15px;
+    }
+
+    .pizza-description {
+        font-size: 8px;
+
+        line-height: 1.4;
+
+        min-height: 34px;
+
+        margin: 6px 0;
+    }
+
+    .price {
+        font-size: 15px;
+    }
+
+    .add-button {
+        font-size: 8px;
+
+        padding: 6px 8px;
+    }
+
+    /* HISTÓRIA */
+
+    .historia {
+        padding: 45px 16px 40px;
+    }
+
+    .historia-top {
+        gap: 18px;
+
+        margin-bottom: 40px;
+
+        justify-content: center;
+    }
+
+    .historia-ilustracao {
+        width: 90px;
+    }
+
+    .historia-titulo {
+        flex: 1;
+    }
+
+    .historia-titulo span {
+        font-size: 10px;
+
+        margin-bottom: 6px;
+    }
+
+    .historia-titulo h2 {
+        font-size: clamp(25px, 7vw, 34px);
+
+        line-height: 1.05;
+    }
+
+    /* 3 COLUNAS */
+
+    .historia-itens {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 12px;
+    }
+
+    .historia-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+
+        margin-bottom: 9px;
+    }
+
+    .historia-item strong {
+        font-size: 9px;
+    }
+
+    .historia-item h3 {
+        font-size: 11px;
+
+        line-height: 1.15;
+
+        margin-bottom: 5px;
+    }
+
+    .historia-item p {
+        font-size: 7px;
+
+        line-height: 1.4;
+
+        max-width: 105px;
+    }
+
+    /* INFORMAÇÕES */
+
+    .informacoes {
+        min-height: auto;
+
+        padding: 30px 15px;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 25px 12px;
+    }
+
+    .info-card {
+        gap: 8px;
+
+        justify-content: center;
+    }
+
+    .info-icon {
+        width: 34px;
+        height: 34px;
+
+        font-size: 16px;
+    }
+
+    .info-text span {
+        font-size: 8px;
+    }
+
+    .info-text strong {
+        font-size: 11px;
+    }
+
+    .info-text small {
+        font-size: 6.5px;
+    }
+
+    .pedido-info {
+        grid-column: 1 / -1;
+
+        padding: 10px 5px;
+    }
+
+    .pedido-info::after {
+        width: 100px;
+        height: 75px;
+
+        right: -15px;
+        top: -25px;
+    }
+
+    .pedido-info h3 {
+        font-size: 11px;
+    }
+
+    .pedido-info p {
+        font-size: 7px;
+    }
+
+    /* FOOTER */
+
+    .instagram {
+        min-height: 32px;
+
+        font-size: 8px;
+    }
+
+    .footer-content {
+        min-height: 230px;
+
+        padding: 30px 10px;
+    }
+
+    .footer-logo-area {
+        padding: 18px 55px;
+
+        border-width: 3px;
+    }
+
+    .footer-logo {
+        font-size: 55px;
+
+        letter-spacing: -4px;
+    }
+
+    .footer-subtitle {
+        font-size: 20px;
+
+        margin-top: 6px;
+    }
+
+    .footer-logo-area p {
+        font-size: 8px;
+
+        margin-top: 6px;
+    }
+
+    .footer-logo-area small {
+        font-size: 6px;
+
+        margin-top: 8px;
+    }
+
+    .chef-decoration {
+        width: 90px;
+
+        right: -2px;
+
+        bottom: 8px;
+    }
+}
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+========================================================= */
+
+@media (max-width: 380px) {
+
+    header {
+        padding: 0 10px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+    .pedido {
+        font-size: 8px;
+
+        padding: 5px 7px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .subtitle {
+        font-size: 27px;
+    }
+
+    .slogan {
+        font-size: 17px;
+    }
+
+    .pizza-grid {
+        gap: 14px 8px;
+    }
+
+    .pizza-card img {
+        height: 110px;
+    }
+
+    .pizza-name {
+        font-size: 14px;
+    }
+
+    .pizza-description {
+        font-size: 7px;
+    }
+
+    .historia-top {
+        gap: 12px;
+    }
+
+    .historia-ilustracao {
+        width: 72px;
+    }
+
+    .historia-titulo h2 {
+        font-size: 23px;
+    }
+
+    .historia-item h3 {
+        font-size: 10px;
+    }
+
+    .historia-item p {
+        font-size: 6.5px;
+    }
+
+    .footer-logo-area {
+        padding: 15px 42px;
+    }
+
+    .footer-logo {
+        font-size: 48px;
+    }
+
+    .chef-decoration {
+        width: 75px;
+    }
+}
+
+/* =========================================================
+   CELULARES MINÚSCULOS
+========================================================= */
+
+@media (max-width: 340px) {
+
+    header {
+        padding: 0 8px;
+
+        gap: 7px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav {
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: 8px;
+    }
+
+    .pedido {
+        font-size: 7px;
+
+        padding: 4px 6px;
+    }
+
+    .hero h1 {
+        font-size: 47px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .slogan {
+        font-size: 15px;
+    }
+
+    .pizza-grid {
+        gap: 12px 6px;
+    }
+
+    .pizza-card img {
+        height: 100px;
+    }
+
+    .pizza-info {
+        padding: 8px 6px;
+    }
+
+    .pizza-name {
+        font-size: 13px;
+    }
+
+    .price {
+        font-size: 13px;
+    }
+
+    .add-button {
+        font-size: 7px;
+
+        padding: 5px 6px;
+    }
+}
